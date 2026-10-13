@@ -183,7 +183,7 @@
         </div>
         <div class="text-xs text-slate-700 leading-tight">
           <span id="toast-text" class="font-medium">
-            <strong class="text-slate-900 font-bold">Ashley N.</strong> from California just claimed a <strong class="text-slate-900 font-bold">$750 voucher!</strong>
+            <strong class="text-slate-900 font-bold">Ashley N.</strong> just claimed a <strong class="text-slate-900 font-bold">$750 voucher!</strong>
           </span>
         </div>
       </div>
@@ -194,11 +194,16 @@
 
   <script>
     const socialClaims = [
-      { name: "Ashley N.", state: "California", reward: "$750 voucher!" },
-      { name: "Grace P.", state: "Ohio", reward: "$750 gift card!" },
-      { name: "Hannah K.", state: "Texas", reward: "$750 reward code!" },
-      { name: "Chloe R.", state: "Florida", reward: "$750 voucher!" },
-      { name: "Jessica B.", state: "New York", reward: "$750 gift card!" }
+      "Ashley N.", "Grace P.", "Hannah K.", "Chloe R.", "Jessica B.", 
+      "Samantha T.", "Emily W.", "Madison C.", "Olivia R.", "Sophia M.", 
+      "Emma L.", "Ava S.", "Isabella H.", "Mia D.", "Harper B.", 
+      "Evelyn K.", "Abigail M.", "Ella R.", "Elizabeth V.", "Camila P.", 
+      "Aaliyah T.", "Sofia G.", "Aria L.", "Scarlett W.", "Victoria S.", 
+      "Madison F.", "Maya D.", "Penelope H.", "Layla K.", "Chloe M.", 
+      "Zoey B.", "Nora R.", "Lily C.", "Eleanor S.", "Hannah V.", 
+      "Lillian G.", "Addison W.", "Aubrey M.", "Ellie K.", "Stella P.", 
+      "Natalie D.", "Zoe H.", "Leah C.", "Hazel R.", "Violet B.", 
+      "Aurora M.", "Savannah S.", "Audrey T.", "Brooklyn L.", "Bella K."
     ];
 
     let toastIndex = 0;
@@ -206,15 +211,15 @@
 
     function updateToast() {
       toastIndex = (toastIndex + 1) % socialClaims.length;
-      const data = socialClaims[toastIndex];
+      const name = socialClaims[toastIndex];
       
       toastElem.style.opacity = '0';
       toastElem.style.transform = 'translateY(8px)';
 
       setTimeout(() => {
-        document.getElementById('toast-avatar').innerText = data.name.charAt(0);
+        document.getElementById('toast-avatar').innerText = name.charAt(0);
         document.getElementById('toast-text').innerHTML = 
-          <strong class="text-slate-900 font-bold">${data.name}</strong> from ${data.state} just claimed a <strong class="text-slate-900 font-bold">${data.reward}</strong>;
+          <strong class="text-slate-900 font-bold">${name}</strong> just claimed a <strong class="text-slate-900 font-bold">$750 voucher!</strong>;
         
         toastElem.style.opacity = '1';
         toastElem.style.transform = 'translateY(0)';
@@ -225,7 +230,7 @@
       toastElem.style.display = 'none';
     }
 
-    setInterval(updateToast, 12000);
+    setInterval(updateToast, 8000);
 
     setInterval(() => {
       const viewerElem = document.getElementById('viewer-count');
