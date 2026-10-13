@@ -1,53 +1,3 @@
-Rebuild and optimize this single-page mobile-first Nordstrom reward landing page into a high-converting, luxury-feel offer page for stylish fitness-focused women ("fit-girl era").
-
-### 1. Header & High-Converting Typography
-- *Brand Title:* "NORDSTROM" (Bold, elegant sans-serif uppercase centered at top).
-- *Hero Title:* "UNLOCK YOUR $750 NORDSTROM HAUL." (Bold, high-contrast, attention-grabbing headline).
-- *Hero Subtitle:* "Claim the reward for your fit-girl era. Verified offers, simple steps." (Clean, authoritative lead copy).
-
-### 2. Interactive Steps Layout
-Create a 2x2 grid (or stacked clean cards on mobile) with subtle glassmorphism/shadow effects:
-1. *Step 1:* Icon + "1. Click the button below" | Subtext: "Instant access to your verified offer list."
-2. *Step 3:* Icon + "3. Complete 5+ deals" | Subtext: "Discover new brands, get rewarded fast."
-3. *Step 2:* Icon + "2. Enter your basic info" | Subtext: "Simple, secure, and data-protected."
-4. *Step 4:* Icon + "4. Follow the reward instructions" | Subtext: "Your haul, your choice. Fast delivery."
-
-### 3. Primary Call-To-Action (CTA)
-- *Primary CTA Button Text:* "EXPLORE YOUR REWARD OFFER →"
-- *Redirect Target:* Set exact button href to https://trksy.org/aff_c?offer_id=4632&aff_id=171432
-- *Button Styling:* Full-width, rounded edges, deep burgundy fill (#802340 / #702432), crisp white bold text, hover scale effect.
-- *Subtext below CTA:* "Third-party offer • Eligibility & terms apply" (small muted gray caption).
-
-### 4. Floating Live Social Proof Popup (Toast)
-- Fixed bottom-left floating popup card.
-- Automatically changes every 30 seconds.
-- Exclusively uses the *$750* reward amount:
-  - Example: "Grace P. from Ohio just claimed a $750 voucher!"
-  - Example: "Ashley M. from Florida just claimed a $750 gift card!"
-  - Example: "Hannah K. from Texas just claimed a $750 reward code!"
-- Left avatar circle with initial letter (light pink badge), dismissable "X" button on top-right.
-
-### 5. High-Converting Scarcity & Availability Box
-Include a styled card above the FAQ section:
-- *Header:* Reward Availability: *HIGH* (green pill badge)
-- *Progress Bar:* 76% filled green progress indicator bar.
-- *Counters:* 
-  - Left: "🔥 152 / 200 rewards remaining today!"
-  - Right: "👁️ 284 viewing now"
-
-### 6. FAQ Section ("A FEW THINGS TO KNOW")
-Include collapsible accordion or simple text blocks with these exact questions and answers:
-- *How many do I need?*
-  Complete 5+ deals to receive your reward. The more deals you complete, the faster you can receive your discount code.
-- *What are deals?*
-  Deals are random quick tasks like testing apps or games, surveys, free app trials, or forms. They are straightforward and designed to be completed quickly.
-- *How fast do I get it?*
-  Check your email within 24 hours of completing the deals.
-
-### 7. Mobile Optimization & Visual Aesthetic
-- *Target Container:* Max-width 480px, fully mobile-centered viewport.
-- *Background Palette:* Soft off-white/cream or soft marble texture, with deep maroon/burgundy primary accent elements.
-- *SEO & Performance:* Clean semantic HTML markup (<h1>, <h2>), fast lightweight loading speed, and accessible touch targets.
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,4 +21,221 @@ Include collapsible accordion or simple text blocks with these exact questions a
     .toast-slide { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
   </style>
 </head>
-<body class="min-h-screen flex justify-center items-start py-0 sm:py-6 px-0 sm:px-4 text-slate-8
+<body class="min-h-screen flex justify-center items-start py-0 sm:py-6 px-0 sm:px-4 text-slate-800">
+
+  <main class="w-full max-w-[480px] bg-white min-h-screen sm:min-h-0 sm:rounded-3xl shadow-xl overflow-hidden flex flex-col relative border border-rose-100/50">
+    
+    <!-- Header -->
+    <header class="pt-8 pb-4 px-6 text-center border-b border-rose-50/80 bg-white/80 backdrop-blur-md sticky top-0 z-20">
+      <h1 class="text-2xl font-extrabold tracking-[0.2em] text-slate-900 uppercase">NORDSTROM</h1>
+    </header>
+
+    <div class="px-5 py-6 space-y-6 flex-1">
+      
+      <section class="text-center space-y-2">
+        <h2 class="text-2xl sm:text-[26px] font-extrabold tracking-tight text-slate-900 leading-tight">
+          UNLOCK YOUR <span class="text-burgundy">$750</span> NORDSTROM HAUL.
+        </h2>
+        <p class="text-sm font-medium text-slate-500 max-w-xs mx-auto leading-relaxed">
+          Claim the reward for your fit-girl era. Verified offers, simple steps.
+        </p>
+      </section>
+
+      <section class="grid grid-cols-2 gap-3">
+        
+        <!-- Step 1 -->
+        <div class="p-3.5 rounded-2xl bg-gradient-to-b from-rose-50/50 to-white border border-rose-100/80 shadow-sm flex flex-col space-y-1.5">
+          <div class="w-7 h-7 rounded-full bg-rose-100 text-burgundy font-bold text-xs flex items-center justify-center">1</div>
+          <h3 class="text-xs font-bold text-slate-900 leading-snug">Click the button below</h3>
+          <p class="text-[11px] text-slate-500 leading-tight">Instant access to your verified offer list.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-3.5 rounded-2xl bg-gradient-to-b from-rose-50/50 to-white border border-rose-100/80 shadow-sm flex flex-col space-y-1.5">
+          <div class="w-7 h-7 rounded-full bg-rose-100 text-burgundy font-bold text-xs flex items-center justify-center">2</div>
+          <h3 class="text-xs font-bold text-slate-900 leading-snug">Enter your basic info</h3>
+          <p class="text-[11px] text-slate-500 leading-tight">Simple, secure, and data-protected.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-3.5 rounded-2xl bg-gradient-to-b from-rose-50/50 to-white border border-rose-100/80 shadow-sm flex flex-col space-y-1.5">
+          <div class="w-7 h-7 rounded-full bg-rose-100 text-burgundy font-bold text-xs flex items-center justify-center">3</div>
+          <h3 class="text-xs font-bold text-slate-900 leading-snug">Complete 5+ deals</h3>
+          <p class="text-[11px] text-slate-500 leading-tight">Discover new brands, get rewarded fast.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-3.5 rounded-2xl bg-gradient-to-b from-rose-50/50 to-white border border-rose-100/80 shadow-sm flex flex-col space-y-1.5">
+          <div class="w-7 h-7 rounded-full bg-rose-100 text-burgundy font-bold text-xs flex items-center justify-center">4</div>
+          <h3 class="text-xs font-bold text-slate-900 leading-snug">Follow instructions</h3>
+          <p class="text-[11px] text-slate-500 leading-tight">Your haul, your choice. Fast delivery.</p>
+        </div>
+
+      </section>
+
+      <section class="space-y-2 text-center pt-1">
+        <a id="cta-button" 
+           href="https://trksy.org/aff_c?offer_id=4632&aff_id=171432" 
+           target="_blank"
+           rel="noopener noreferrer"
+           class="accent-burgundy accent-burgundy-hover text-white font-bold text-base py-4 px-6 rounded-2xl shadow-lg shadow-rose-900/15 flex items-center justify-center space-x-2 transition-all transform active:scale-[0.98] w-full group">
+          <span>EXPLORE YOUR REWARD OFFER</span>
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+        <p class="text-[11px] font-medium text-slate-400">
+          Third-party offer • Eligibility & terms apply
+        </p>
+      </section>
+
+      <section class="bg-gradient-to-br from-slate-50 to-rose-50/40 rounded-2xl p-4 border border-slate-100 space-y-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span class="text-xs font-bold text-slate-700">Reward Availability:</span>
+          </div>
+          <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+            HIGH
+          </span>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+          <div class="bg-emerald-500 h-full w-[76%] rounded-full transition-all duration-1000"></div>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] font-semibold text-slate-600 pt-0.5">
+          <span class="flex items-center space-x-1">
+            <span>🔥</span>
+            <span><strong class="text-slate-900">152 / 200</strong> rewards remaining today!</span>
+          </span>
+          <span class="flex items-center space-x-1 text-slate-500">
+            <span>👁️</span>
+            <span><strong class="text-slate-900" id="viewer-count">284</strong> viewing now</span>
+          </span>
+        </div>
+      </section>
+
+      <section class="space-y-3 pt-2">
+        <h3 class="text-xs font-extrabold tracking-wider text-burgundy uppercase">A FEW THINGS TO KNOW</h3>
+        
+        <div class="space-y-2 text-left">
+          
+          <div class="border border-slate-100 rounded-xl overflow-hidden bg-white">
+            <button onclick="toggleFaq(1)" class="w-full px-4 py-3 text-xs font-bold text-slate-800 flex justify-between items-center text-left hover:bg-slate-50">
+              <span>How many do I need?</span>
+              <span id="icon-1" class="text-slate-400 font-normal">+</span>
+            </button>
+            <div id="faq-1" class="hidden px-4 pb-3 text-[11px] text-slate-500 leading-relaxed border-t border-slate-50 pt-2">
+              Complete 5+ deals to receive your reward. The more deals you complete, the faster you can receive your discount code.
+            </div>
+          </div>
+
+          <div class="border border-slate-100 rounded-xl overflow-hidden bg-white">
+            <button onclick="toggleFaq(2)" class="w-full px-4 py-3 text-xs font-bold text-slate-800 flex justify-between items-center text-left hover:bg-slate-50">
+              <span>What are deals?</span>
+              <span id="icon-2" class="text-slate-400 font-normal">+</span>
+            </button>
+            <div id="faq-2" class="hidden px-4 pb-3 text-[11px] text-slate-500 leading-relaxed border-t border-slate-50 pt-2">
+              Deals are random quick tasks like testing apps or games, surveys, free app trials, or forms. They are straightforward and designed to be completed quickly.
+            </div>
+          </div>
+
+          <div class="border border-slate-100 rounded-xl overflow-hidden bg-white">
+            <button onclick="toggleFaq(3)" class="w-full px-4 py-3 text-xs font-bold text-slate-800 flex justify-between items-center text-left hover:bg-slate-50">
+              <span>How fast do I get it?</span>
+              <span id="icon-3" class="text-slate-400 font-normal">+</span>
+            </button>
+            <div id="faq-3" class="hidden px-4 pb-3 text-[11px] text-slate-500 leading-relaxed border-t border-slate-50 pt-2">
+              Check your email within 24 hours of completing the deals.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="p-4 text-center border-t border-slate-100 text-[10px] text-slate-400 bg-slate-50/50">
+      © Nordstrom Reward Program • Independent Third-Party Offer
+    </footer>
+
+    <div id="social-toast" class="toast-slide fixed bottom-4 left-4 right-4 sm:left-auto sm:right-auto sm:w-[380px] z-30 bg-white/95 backdrop-blur-md border border-rose-100 p-3 rounded-2xl shadow-xl flex items-center justify-between space-x-3">
+      <div class="flex items-center space-x-3">
+        <div id="toast-avatar" class="w-8 h-8 rounded-full bg-rose-100 text-burgundy font-bold text-xs flex items-center justify-center shrink-0">
+          G
+        </div>
+        <div class="text-[11px] text-slate-700 leading-tight">
+          <span id="toast-text" class="font-medium">
+            <strong class="text-slate-900 font-semibold">Grace P.</strong> from Ohio just claimed a <strong class="text-burgundy">$750 voucher!</strong>
+          </span>
+        </div>
+      </div>
+      <button onclick="dismissToast()" class="text-slate-300 hover:text-slate-500 p-1 text-xs font-bold">✕</button>
+    </div>
+
+  </main>
+
+  <script>
+    function toggleFaq(id) {
+      const content = document.getElementById(faq-${id});
+      const icon = document.getElementById(icon-${id});
+      const isHidden = content.classList.contains('hidden');
+      
+      document.querySelectorAll('[id^="faq-"]').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('[id^="icon-"]').forEach(el => el.innerText = '+');
+      
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.innerText = '−';
+      }
+    }
+
+    const socialClaims = [
+      { name: "Grace P.", state: "Ohio", reward: "$750 voucher" },
+      { name: "Ashley M.", state: "Florida", reward: "$750 gift card" },
+      { name: "Hannah K.", state: "Texas", reward: "$750 reward code" },
+      { name: "Chloe R.", state: "California", reward: "$750 voucher" },
+      { name: "Jessica B.", state: "New York", reward: "$750 gift card" },
+      { name: "Samantha T.", state: "Georgia", reward: "$750 voucher" }
+    ];
+
+    let toastIndex = 0;
+    const toastElem = document.getElementById('social-toast');
+
+    function updateToast() {
+      toastIndex = (toastIndex + 1) % socialClaims.length;
+      const data = socialClaims[toastIndex];
+      
+      toastElem.style.opacity = '0';
+      toastElem.style.transform = 'translateY(10px)';
+
+      setTimeout(() => {
+        document.getElementById('toast-avatar').innerText = data.name.charAt(0);
+        document.getElementById('toast-text').innerHTML = 
+          <strong class="text-slate-900 font-semibold">${data.name}</strong> from ${data.state} just claimed a <strong class="text-burgundy">${data.reward}!</strong>;
+        
+        toastElem.style.opacity = '1';
+        toastElem.style.transform = 'translateY(0)';
+      }, 400);
+    }
+
+    function dismissToast() {
+      toastElem.style.display = 'none';
+    }
+
+    setInterval(updateToast, 30000);
+
+    setInterval(() => {
+      const viewerElem = document.getElementById('viewer-count');
+      let current = parseInt(viewerElem.innerText);
+      let diff = Math.floor(Math.random() * 7) - 3;
+      viewerElem.innerText = Math.max(250, current + diff);
+    }, 5000);
+  </script>
+</body>
+</html>
