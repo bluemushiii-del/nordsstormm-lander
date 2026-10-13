@@ -4,74 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nordstrom Rewards | Claim Your $750 Haul</title>
-  <meta name="description" content="Unlock your $750 Nordstrom haul today. Simple steps, verified third-party reward offers for your fit-girl era.">
+  <meta name="description" content="Your next haul. A little more rewarding. Claim your $750 Nordstrom reward for your fit-girl era.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #f7f5f2;
-      background-image: 
-        radial-gradient(at 0% 0%, rgba(243, 235, 233, 0.😎 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(235, 222, 225, 0.6) 0px, transparent 50%);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f7f4f2;
+      color: #222222;
+      -webkit-font-smoothing: antialiased;
     }
-    .accent-burgundy { background-color: #802340; }
-    .accent-burgundy-hover:hover { background-color: #6a1c34; }
-    .text-burgundy { color: #802340; }
-    .toast-slide { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .bg-burgundy { background-color: #a33555; }
+    .bg-burgundy-hover:hover { background-color: #882b45; }
+    .text-burgundy { color: #a33555; }
+    .border-burgundy { border-color: #a33555; }
+    
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .cta-animate {
+      animation: pulse-subtle 3s infinite ease-in-out;
+    }
   </style>
 </head>
-<body class="min-h-screen flex justify-center items-start py-0 sm:py-6 px-0 sm:px-4 text-slate-800">
+<body class="min-h-screen flex justify-center items-start py-0 sm:py-6 px-0 sm:px-4">
 
   <!-- Main Container -->
-  <main class="w-full max-w-[480px] bg-white min-h-screen sm:min-h-0 sm:rounded-3xl shadow-xl overflow-hidden flex flex-col relative border border-rose-100/50">
+  <main class="w-full max-w-[440px] bg-white min-h-screen sm:min-h-0 sm:rounded-3xl shadow-xl overflow-hidden flex flex-col relative border border-stone-200/60 my-0 sm:my-4">
     
     <!-- Top Header -->
-    <header class="pt-8 pb-4 px-6 text-center border-b border-rose-50/80 bg-white/80 backdrop-blur-md sticky top-0 z-20">
-      <h1 class="text-2xl font-extrabold tracking-[0.2em] text-slate-900 uppercase">NORDSTROM</h1>
+    <header class="pt-8 pb-4 px-6 text-center bg-white sticky top-0 z-20">
+      <h1 class="text-2xl font-extrabold tracking-[0.18em] text-slate-900 uppercase">NORDSTROM</h1>
     </header>
 
-    <div class="px-5 py-6 space-y-6 flex-1">
+    <div class="px-6 pb-8 space-y-6 flex-1">
       
-      <!-- Hero Section -->
-      <section class="text-center space-y-2">
-        <h2 class="text-2xl sm:text-[26px] font-extrabold tracking-tight text-slate-900 leading-tight">
-          UNLOCK YOUR <span class="text-burgundy">$750</span> NORDSTROM HAUL.
+      <!-- Hero Headline Section -->
+      <section class="text-center space-y-2 pt-1">
+        <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 leading-tight">
+          Your next haul.<br>
+          <span class="text-burgundy">A little more rewarding.</span>
         </h2>
-        <p class="text-sm font-medium text-slate-500 max-w-xs mx-auto leading-relaxed">
-          Claim the reward for your fit-girl era. Verified offers, simple steps.
+        <p class="text-sm font-medium text-slate-500 max-w-xs mx-auto leading-relaxed pt-1">
+          For your fit-girl era. And everything you wear after.
         </p>
       </section>
 
-      <!-- 2x2 Interactive Steps Grid -->
-      <section class="grid grid-cols-2 gap-3">
+      <!-- Steps Stack List -->
+      <section class="border border-stone-200 rounded-2xl overflow-hidden divide-y divide-stone-200 bg-white shadow-sm">
         
         <!-- Step 1 -->
-        <div class="p-3.5 rounded-2xl bg-gradient-to-b from-rose-50/50 to-white border border-rose-100/80 shadow-sm flex flex-col space-y-1.5">
-          <div class="w-7 h-7 rounded-full bg-rose-100 text-burgundy font-bold text-xs flex items-center justify-center">1</div>
-          <h3 class="text-xs font-bold text-slate-900 leading-snug">Click the button below</h3>
-          <p class="text-[11px] text-slate-500 leading-tight">Instant access to your verified offer list.</p>
+        <div class="p-4 flex items-center justify-between space-x-3 bg-white">
+          <div class="flex items-center space-x-3.5">
+            <div class="w-8 h-8 rounded-full bg-burgundy text-white font-bold text-xs flex items-center justify-center shrink-0">1</div>
+            <span class="text-sm font-bold text-slate-900">Click the button below</span>
+          </div>
+          <svg class="w-4 h-4 text-burgundy shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
         </div>
 
         <!-- Step 2 -->
-        <div class="p-3.5 rounded-2xl bg-gradient-to-b from-rose-50/50 to-white border border-rose-100/80 shadow-sm flex flex-col space-y-1.5">
-          <div class="w-7 h-7 rounded-full bg-rose-100 text-burgundy font-bold text-xs flex items-center justify-center">2</div>
-          <h3 class="text-xs font-bold text-slate-900 leading-snug">Enter your basic info</h3>
-          <p class="text-[11px] text-slate-500 leading-tight">Simple, secure, and data-protected.</p>
+        <div class="p-4 flex items-center justify-between space-x-3 bg-white">
+          <div class="flex items-center space-x-3.5">
+            <div class="w-8 h-8 rounded-full bg-burgundy text-white font-bold text-xs flex items-center justify-center shrink-0">2</div>
+            <span class="text-sm font-bold text-slate-900">Enter your basic info</span>
+          </div>
         </div>
 
         <!-- Step 3 -->
-        <div class="p-3.5 rounded-2xl bg-gradient-to-b from-rose-50/50 to-white border border-rose-100/80 shadow-sm flex flex-col space-y-1.5">
-          <div class="w-7 h-7 rounded-full bg-rose-100 text-burgundy font-bold text-xs flex items-center justify-center">3</div>
-          <h3 class="text-xs font-bold text-slate-900 leading-snug">Complete 5+ deals</h3>
-          <p class="text-[11px] text-slate-500 leading-tight">Discover new brands, get rewarded fast.</p>
+        <div class="p-4 flex items-center justify-between space-x-3 bg-white">
+          <div class="flex items-center space-x-3.5">
+            <div class="w-8 h-8 rounded-full bg-burgundy text-white font-bold text-xs flex items-center justify-center shrink-0">3</div>
+            <span class="text-sm font-bold text-slate-900">Complete 5+ deals</span>
+          </div>
         </div>
 
         <!-- Step 4 -->
-        <div class="p-3.5 rounded-2xl bg-gradient-to-b from-rose-50/50 to-white border border-rose-100/80 shadow-sm flex flex-col space-y-1.5">
-          <div class="w-7 h-7 rounded-full bg-rose-100 text-burgundy font-bold text-xs flex items-center justify-center">4</div>
-          <h3 class="text-xs font-bold text-slate-900 leading-snug">Follow instructions</h3>
-          <p class="text-[11px] text-slate-500 leading-tight">Your haul, your choice. Fast delivery.</p>
+        <div class="p-4 flex items-center justify-between space-x-3 bg-white">
+          <div class="flex items-center space-x-3.5">
+            <div class="w-8 h-8 rounded-full bg-burgundy text-white font-bold text-xs flex items-center justify-center shrink-0">4</div>
+            <span class="text-sm font-bold text-slate-900">Follow the reward instructions</span>
+          </div>
+          <svg class="w-4 h-4 text-burgundy shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+          </svg>
         </div>
 
       </section>
@@ -82,10 +100,139 @@
            href="https://trksy.org/aff_c?offer_id=4632&aff_id=171432" 
            target="_blank"
            rel="noopener noreferrer"
-           class="accent-burgundy accent-burgundy-hover text-white font-bold text-base py-4 px-6 rounded-2xl shadow-lg shadow-rose-900/15 flex items-center justify-center space-x-2 transition-all transform active:scale-[0.98] w-full group">
-          <span>EXPLORE YOUR REWARD OFFER</span>
-          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+           class="bg-burgundy bg-burgundy-hover text-white font-bold text-base py-4 px-6 rounded-2xl shadow-lg shadow-rose-900/15 flex items-center justify-between transition-all cta-animate w-full">
+          <span>Explore your reward offer</span>
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
           </svg>
         </a>
-        <p class="text-[11px] font-medium text-slate-
+        <p class="text-[11px] font-medium text-stone-400">
+          Third-party offer • Eligibility & terms apply
+        </p>
+      </section>
+
+      <!-- Reward Availability & Scarcity Indicator -->
+      <section class="bg-stone-50/80 rounded-2xl p-4 border border-stone-200/80 space-y-2.5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span class="text-xs font-bold text-slate-800">Reward Availability:</span>
+          </div>
+          <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+            HIGH
+          </span>
+        </div>
+
+        <div class="w-full bg-stone-200 h-2 rounded-full overflow-hidden">
+          <div class="bg-emerald-500 h-full w-[76%] rounded-full"></div>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] font-semibold text-slate-600">
+          <span>🔥 <strong class="text-slate-900">152 / 200</strong> rewards remaining today!</span>
+          <span>👁️ <strong class="text-slate-900" id="viewer-count">284</strong> viewing now</span>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="space-y-4 pt-3 border-t border-stone-100">
+        <h3 class="text-xs font-bold tracking-wider text-burgundy uppercase">A FEW THINGS TO KNOW</h3>
+        
+        <div class="space-y-5 text-left">
+          
+          <div class="space-y-1">
+            <h4 class="text-sm font-bold text-slate-900">How many do I need?</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Complete 5+ deals to receive your reward. The more deals you complete, the faster you can receive your discount code.
+            </p>
+          </div>
+
+          <div class="space-y-1">
+            <h4 class="text-sm font-bold text-slate-900">What are deals?</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Deals are random quick tasks like testing app or games, surveys, free app trials or forms and are straightforward and designed to be completed quickly.
+            </p>
+          </div>
+
+          <div class="space-y-1">
+            <h4 class="text-sm font-bold text-slate-900">How fast do I get it?</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Check your email within 24 hours of completing the deals
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Affiliate & Disclaimer Footer Copy -->
+      <footer class="pt-4 border-t border-stone-100 text-[10px] text-slate-400 text-center leading-relaxed space-y-2">
+        <p>
+          This is an independent promotional page, not affiliated with or endorsed by Nordstrom. Nordstrom is a trademark of its owner. Affiliate disclosure: We may earn a commission when you use this link. Review the provider's terms before submitting personal information. Participant notices shown are illustrative examples, not real activity.
+        </p>
+      </footer>
+
+    </div>
+
+    <!-- Floating Live Social Proof Toast -->
+    <div id="social-toast" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-auto sm:w-[380px] z-30 bg-white border-l-4 border-burgundy p-3.5 rounded-2xl shadow-xl flex items-center justify-between space-x-3 transition-all duration-300">
+      <div class="flex items-center space-x-3">
+        <div id="toast-avatar" class="w-8 h-8 rounded-full bg-rose-100 text-burgundy font-bold text-xs flex items-center justify-center shrink-0">
+          A
+        </div>
+        <div class="text-xs text-slate-700 leading-tight">
+          <span id="toast-text" class="font-medium">
+            <strong class="text-slate-900 font-bold">Ashley N.</strong> from California just claimed a <strong class="text-slate-900 font-bold">$750 voucher!</strong>
+          </span>
+        </div>
+      </div>
+      <button onclick="dismissToast()" class="text-slate-400 hover:text-slate-600 p-1 text-sm font-bold">✕</button>
+    </div>
+
+  </main>
+
+  <script>
+    const socialClaims = [
+      { name: "Ashley N.", state: "California", reward: "$750 voucher!" },
+      { name: "Grace P.", state: "Ohio", reward: "$750 gift card!" },
+      { name: "Hannah K.", state: "Texas", reward: "$750 reward code!" },
+      { name: "Chloe R.", state: "Florida", reward: "$750 voucher!" },
+      { name: "Jessica B.", state: "New York", reward: "$750 gift card!" }
+    ];
+
+    let toastIndex = 0;
+    const toastElem = document.getElementById('social-toast');
+
+    function updateToast() {
+      toastIndex = (toastIndex + 1) % socialClaims.length;
+      const data = socialClaims[toastIndex];
+      
+      toastElem.style.opacity = '0';
+      toastElem.style.transform = 'translateY(8px)';
+
+      setTimeout(() => {
+        document.getElementById('toast-avatar').innerText = data.name.charAt(0);
+        document.getElementById('toast-text').innerHTML = 
+          <strong class="text-slate-900 font-bold">${data.name}</strong> from ${data.state} just claimed a <strong class="text-slate-900 font-bold">${data.reward}</strong>;
+        
+        toastElem.style.opacity = '1';
+        toastElem.style.transform = 'translateY(0)';
+      }, 300);
+    }
+
+    function dismissToast() {
+      toastElem.style.display = 'none';
+    }
+
+    setInterval(updateToast, 12000);
+
+    setInterval(() => {
+      const viewerElem = document.getElementById('viewer-count');
+      let current = parseInt(viewerElem.innerText);
+      let diff = Math.floor(Math.random() * 5) - 2;
+      viewerElem.innerText = Math.max(250, current + diff);
+    }, 4000);
+  </script>
+</body>
+</html>
